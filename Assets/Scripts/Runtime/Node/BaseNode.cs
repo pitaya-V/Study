@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -65,7 +66,7 @@ public abstract class BaseNode
     /// 遍历子节点
     /// </summary>
     /// <param name="child"></param>
-    public abstract void ForeachChild(BaseNode child);
+    public abstract void ForeachChild(Action<BaseNode> action);
 
     /// <summary>
     /// 开始运行节点
